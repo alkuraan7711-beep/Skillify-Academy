@@ -2,9 +2,9 @@
 
 A responsive landing page for an online tech academy. It features a hero section, course categories, a filterable course list that links to the real learning platforms, a "how it works" section, pricing plans, reviews and a footer. Built with plain HTML, CSS and JavaScript (no framework, no build step).
 
-**[Live demo](https://YOUR-LIVE-LINK-HERE)**
+**[Live demo](https://skillify-academy-psi.vercel.app/)**
 
-<!-- Add a screenshot or GIF here: ![Skillify Academy](./screenshot.png) -->
+![Skillify Academy](./Screenshot%202026-11-09%20221231.gif)
 
 > Portfolio project. The six courses are real and link to the original providers. The stats, reviews and pricing plans are sample content, and the footer says so.
 
@@ -45,10 +45,9 @@ Each course is one `<article class="cours" data-category="...">` in `index.html`
 
 ## What I learned
 
-<!-- Write this in your own words. For example: -->
-<!-- - How to turn a desktop-only layout into a responsive one with a few focused media queries -->
-<!-- - How one event listener with data-attributes can drive a filter from many different buttons -->
-<!-- - How the native <dialog> element gives you focus handling and Esc-to-close for free -->
+- How to turn a desktop-only layout into a responsive one with a few focused media queries
+- How one event listener with data-attributes can drive a filter from many different buttons
+- How the native <dialog> element gives you focus handling and Esc-to-close for free
 
 ## Possible improvements
 
