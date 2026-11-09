@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skillify Academy: hand-picked courses in web development, design, data science and marketing, with links to the original learning platforms.">
+    <meta name="theme-color" content="#252586">
+    <title>Skillify Academy | Learn in-demand tech skills online</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page">
+
+        <!-- ============================ الهيدر ============================ -->
+        <header class="header" id="top">
+            <div class="navbar">
+
+                <a class="logo" href="#top">🎓 Skillify Academy</a>
+
+                <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-panel">☰</button>
+
+                <div class="nav-panel" id="nav-panel">
+                    <nav aria-label="Main">
+                        <ul class="nav">
+                            <li><a href="#top">Home</a></li>
+
+                            <li class="dropdown">
+                                <a href="#courses" class="dropdown-toggle" data-filter="All">Courses</a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#courses" data-filter="Web Development">Web Development</a></li>
+                                    <li><a href="#courses" data-filter="Design">Design</a></li>
+                                    <li><a href="#courses" data-filter="Data Science">Data Science</a></li>
+                                    <li><a href="#courses" data-filter="Marketing">Marketing</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="button">
+                        <button type="button" class="outline" data-auth="login">Login</button>
+                        <button type="button" class="tow-button" data-auth="signup">Sign Up</button>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <main class="section" id="main">
+
+            <!-- ============================ Hero ============================ -->
+            <div class="hero-section">
+
+                <div class="left-section">
+
+                    <div class="badge">🔥 Learn by building real projects</div>
+
+                    <div class="text">
+                        <h1>Master The Tech Skills That Matter.</h1>
+                        <p>Learn in-demand programming skills through hands-on projects, expert mentorship, and a community driven to help you succeed.</p>
+                    </div>
+
+                    <div class="button">
+                        <a class="hero-btn" href="#courses">Start Learning Now</a>
+                    </div>
+
+                    <div class="row-retings">
+                        <h3>⭐ 4.9 (2,000 reviews)</h3>
+                    </div>
+
+                </div>
+
+                <!-- بدل الدواير الملونة: كارت بيوري تجربة التعلم -->
+                <div class="right-section">
+                    <div class="hero-visual" aria-hidden="true">
+                        <div class="learn-card">
+                            <div class="learn-card__top">
+                                <span class="learn-card__icon">💻</span>
+                                <div>
+                                    <p class="learn-card__label">Continue learning</p>
+                                    <h3 class="learn-card__title">JavaScript Fundamentals</h3>
+                                </div>
+                            </div>
+
+                            <div class="progress"><span class="progress__bar"></span></div>
+                            <div class="learn-card__meta"><span>Lesson 14 of 21</span><strong>67%</strong></div>
+
+                            <ul class="learn-card__list">
+                                <li><span>✅</span> Variables &amp; data types</li>
+                                <li><span>✅</span> Functions &amp; scope</li>
+                                <li><span class="todo"></span> Array methods</li>
+                            </ul>
+                        </div>
+
+                        <div class="float-chip float-chip--cert">🏆 Certificate on completion</div>
+                        <div class="float-chip float-chip--streak">🔥 7-day streak</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ============================ المنصات (لينكات حقيقية) ============================ -->
+            <div class="trusted-by">
+                <p>Courses from the platforms learners trust</p>
+                <div class="logos">
+                    <a href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">The Odin Project</a>
+                    <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer">Coursera</a>
+                    <a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer">Kaggle</a>
+                    <a href="https://academy.hubspot.com/" target="_blank" rel="noopener noreferrer">HubSpot Academy</a>
+                    <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a>
+                </div>
+            </div>
+
+            <!-- ============================ التصنيفات (بتفلتر الكورسات) ============================ -->
+            <div class="cards">
+                <button type="button" class="card1 card" data-filter="Web Development" data-scroll aria-pressed="false">
+                    <div class="icon" aria-hidden="true">💻</div>
+                    <div class="texts">
+                        <h2>Web Development</h2>
+                        <p>2 Courses</p>
+                    </div>
+                </button>
+                <button type="button" class="card2 card" data-filter="Design" data-scroll aria-pressed="false">
+                    <div class="icon" aria-hidden="true">🎨</div>
+                    <div class="texts">
+                        <h2>Design</h2>
+                        <p>2 Courses</p>
+                    </div>
+                </button>
+                <button type="button" class="card3 card" data-filter="Data Science" data-scroll aria-pressed="false">
+                    <div class="icon" aria-hidden="true">📊</div>
+                    <div class="texts">
+                        <h2>Data Science</h2>
+                        <p>1 Course</p>
+                    </div>
+                </button>
+                <button type="button" class="card4 card" data-filter="Marketing" data-scroll aria-pressed="false">
+                    <div class="icon" aria-hidden="true">📈</div>
+                    <div class="texts">
+                        <h2>Marketing</h2>
+                        <p>1 Course</p>
+                    </div>
+                </button>
+            </div>
+
+            <!-- ============================ الكورسات ============================ -->
+            <section class="courses-section" id="courses" aria-labelledby="courses-title">
+                <h2 class="section-title" id="courses-title">Popular Courses</h2>
+                <p class="section-sub">Hand-picked courses from the original learning platforms. Click a card to open the course in a new tab.</p>
+
+                <div class="filter-bar" role="group" aria-label="Filter courses by category">
+                    <button type="button" class="chip" data-filter="All" aria-pressed="true">All</button>
+                    <button type="button" class="chip" data-filter="Web Development" aria-pressed="false">Web Development</button>
+                    <button type="button" class="chip" data-filter="Design" aria-pressed="false">Design</button>
+                    <button type="button" class="chip" data-filter="Data Science" aria-pressed="false">Data Science</button>
+                    <button type="button" class="chip" data-filter="Marketing" aria-pressed="false">Marketing</button>
+                </div>
+                <p class="filter-status" id="filter-status" role="status" aria-live="polite">Showing 6 courses</p>
+
+                <div class="popular-courses">
+                <article class="cours" data-category="Web Development">
+                    <div class="icon">
+                        <span aria-hidden="true">💻</span>
+                        <p aria-hidden="true">Free</p>
+                    </div>
+                    <div class="content-cours">
+                        <span class="category-tag">Web Development</span>
+                        <h3 class="course-title"><a class="course-link" href="https://www.theodinproject.com/" target="_blank" rel="noopener noreferrer">Foundations: HTML, CSS &amp; JavaScript<span class="sr-only"> (opens in a new tab)</span></a></h3>
+                        <p class="instructor">by The Odin Project</p>
+                        <p class="course-desc">A free, project-based curriculum that takes you from your first web page to building with JavaScript.</p>
+                        <ul class="course-meta"><li class="tag--free">Free</li><li>Beginner</li><li>Self-paced</li></ul>
+                        <span class="course-cta" aria-hidden="true">Start on theodinproject.com ↗</span>
+                    </div>
+                </article>
+                <article class="cours" data-category="Design">
+                    <div class="icon">
+                        <span aria-hidden="true">🎨</span>
+                        <p aria-hidden="true">Paid</p>
+                    </div>
+                    <div class="content-cours">
+                        <span class="category-tag">Design</span>
+                        <h3 class="course-title"><a class="course-link" href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" rel="noopener noreferrer">Google UX Design Professional Certificate<span class="sr-only"> (opens in a new tab)</span></a></h3>
+                        <p class="instructor">by Google on Coursera</p>
+                        <p class="course-desc">Eight courses on UX research, wireframes and prototypes, including hands-on work in Figma.</p>
+                        <ul class="course-meta"><li class="tag--paid">Paid</li><li>Beginner</li><li>~6 months at 10 hrs/week</li></ul>
+                        <span class="course-cta" aria-hidden="true">Start on coursera.org ↗</span>
+                    </div>
+                </article>
+                <article class="cours" data-category="Data Science">
+                    <div class="icon">
+                        <span aria-hidden="true">📊</span>
+                        <p aria-hidden="true">Free</p>
+                    </div>
+                    <div class="content-cours">
+                        <span class="category-tag">Data Science</span>
+                        <h3 class="course-title"><a class="course-link" href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer">Kaggle Learn: Python, pandas &amp; ML<span class="sr-only"> (opens in a new tab)</span></a></h3>
+                        <p class="instructor">by Kaggle</p>
+                        <p class="course-desc">Short, hands-on micro-courses that run in your browser, from Python basics to machine learning.</p>
+                        <ul class="course-meta"><li class="tag--free">Free</li><li>Beginner</li><li>Free certificates</li></ul>
+                        <span class="course-cta" aria-hidden="true">Start on kaggle.com ↗</span>
+                    </div>
+                </article>
+                <article class="cours" data-category="Marketing">
+                    <div class="icon">
+                        <span aria-hidden="true">📈</span>
+                        <p aria-hidden="true">Free</p>
+                    </div>
+                    <div class="content-cours">
+                        <span class="category-tag">Marketing</span>
+                        <h3 class="course-title"><a class="course-link" href="https://academy.hubspot.com/courses/digital-marketing" target="_blank" rel="noopener noreferrer">Digital Marketing Certification<span class="sr-only"> (opens in a new tab)</span></a></h3>
+                        <p class="instructor">by HubSpot Academy</p>
+                        <p class="course-desc">Learn SEO, social media, email marketing and analytics, and earn a free HubSpot certification.</p>
+                        <ul class="course-meta"><li class="tag--free">Free</li><li>Beginner</li><li>Certificate</li></ul>
+                        <span class="course-cta" aria-hidden="true">Start on academy.hubspot.com ↗</span>
+                    </div>
+                </article>
+                <article class="cours" data-category="Web Development">
+                    <div class="icon">
+                        <span aria-hidden="true">⚡</span>
+                        <p aria-hidden="true">Free</p>
+                    </div>
+                    <div class="content-cours">
+                        <span class="category-tag">Web Development</span>
+                        <h3 class="course-title"><a class="course-link" href="https://javascript.info/" target="_blank" rel="noopener noreferrer">The Modern JavaScript Tutorial<span class="sr-only"> (opens in a new tab)</span></a></h3>
+                        <p class="instructor">by javascript.info</p>
+                        <p class="course-desc">Closures, prototypes, promises and async/await explained with examples and practice tasks.</p>
+                        <ul class="course-meta"><li class="tag--free">Free</li><li>Basics to advanced</li><li>Reading + tasks</li></ul>
+                        <span class="course-cta" aria-hidden="true">Start on javascript.info ↗</span>
+                    </div>
+                </article>
+                <article class="cours" data-category="Design">
+                    <div class="icon">
+                        <span aria-hidden="true">📱</span>
+                        <p aria-hidden="true">Paid</p>
+                    </div>
+                    <div class="content-cours">
+                        <span class="category-tag">Design</span>
+                        <h3 class="course-title"><a class="course-link" href="https://www.udemy.com/course/learn-figma/" target="_blank" rel="noopener noreferrer">Learn Figma: UI/UX Design Essential Training<span class="sr-only"> (opens in a new tab)</span></a></h3>
+                        <p class="instructor">by Udemy</p>
+                        <p class="course-desc">Design a mobile app in Figma with a learn-by-doing approach.</p>
+                        <ul class="course-meta"><li class="tag--paid">Paid (price varies)</li><li>Video course</li></ul>
+                        <span class="course-cta" aria-hidden="true">Start on udemy.com ↗</span>
+                    </div>
+                </article>
+                </div>
+            </section>
+
+            <!-- ============================ How it works ============================ -->
+            <section class="work-steps" id="how-it-works">
+
+                <h2 class="address">How It Works ?</h2>
+
+                <div class="steps">
+                    <div class="step1 step">
+                        <div class="content">
+                            <h3>Choose Your Course</h3>
+                            <p>— Browse our library of 150+ expert-led courses.</p>
+                        </div>
+                    </div>
+                    <div class="step2 step">
+                        <div class="content">
+                            <h3>Learn at Your Pace</h3>
+                            <p>— Access lessons anytime, anywhere, on any device.</p>
+                        </div>
+                    </div>
+                    <div class="step3 step">
+                        <div class="content">
+                            <h3>Get Certified</h3>
+                            <p>— Earn a certificate to showcase your new skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================ الإحصائيات ============================ -->
+            <div class="stats-banner">
+
+                <div class="banner1 banner">
+                    <p>150+</p>
+                    <h3>Courses</h3>
+                </div>
+
+                <div class="banner2 banner">
+                    <p>50K+</p>
+                    <h3>Students</h3>
+                </div>
+
+                <div class="banner3 banner">
+                    <p>4.8★</p>
+                    <h3>Average Rating</h3>
+                </div>
+
+                <div class="banner4 banner">
+                    <p>80+</p>
+                    <h3>Expert Tutors</h3>
+                </div>
+
+            </div>
+
+            <!-- ============================ آراء الطلاب ============================ -->
+            <section class="reviews-section" id="reviews" aria-labelledby="reviews-title">
+                <h2 class="section-title" id="reviews-title">Loved by learners</h2>
+
+                <div class="testimonials">
+                <figure class="testimonials1 card">
+                    <figcaption>
+                        <h3>Mariam Yousef</h3>
+                        <span>Frontend Developer</span>
+                    </figcaption>
+                    <blockquote><p>Skillify completely changed my career path. The courses are practical and the instructors actually care about your progress.</p></blockquote>
+                </figure>
+
+                <figure class="testimonials2 card">
+                    <figcaption>
+                        <h3>Khaled Ezz</h3>
+                        <span>UX Designer</span>
+                    </figcaption>
+                    <blockquote><p>Best investment I've made in my career. Highly recommend!</p></blockquote>
+                </figure>
+
+                <figure class="testimonials3 card">
+                    <figcaption>
+                        <h3>Yasmin Adel</h3>
+                        <span>Data Analyst</span>
+                    </figcaption>
+                    <blockquote><p>The Data Science course gave me the confidence to switch careers completely. Amazing support throughout.</p></blockquote>
+                </figure>
+
+                <figure class="testimonials4 card">
+                    <figcaption>
+                        <h3>Tarek Naguib</h3>
+                        <span>Marketing Specialist</span>
+                    </figcaption>
+                    <blockquote><p>Clear, structured, and to the point. Loved every minute.</p></blockquote>
+                </figure>
+                </div>
+            </section>
+
+            <!-- ============================ الأسعار ============================ -->
+            <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
+                <h2 class="section-title" id="pricing-title">Simple, transparent pricing</h2>
+                <p class="section-sub">Pick a plan and start learning today. Cancel anytime.</p>
+
+                <div class="pricing-plane">
+                <div class="plane1 plane">
+
+                    <div class="logo-plane">
+                        <h3>Basic</h3>
+                        <h2><span>$19</span>/month</h2>
+                    </div>
+
+                    <div class="texts">
+                        <p>✓ Access to 50 courses</p>
+                        <p>✓ Community support</p>
+                        <p>✓ Mobile access</p>
+                        <p>✗ Certificate</p>
+                        <p>✗ 1-on-1 mentoring</p>
+                    </div>
+
+                    <div class="but"><button type="button" data-auth="signup" data-plan="Basic">Get Started</button></div>
+
+                </div>
+                <div class="plane2 plane">
+
+                    <div class="logo-plane">
+                        <h3>Pro</h3>
+                        <h2><span>$39</span>/month</h2>
+                    </div>
+
+                    <div class="texts">
+                        <p>✓ Access to all 150+ courses</p>
+                        <p>✓ Priority support</p>
+                        <p>✓ Mobile access</p>
+                        <p>✓ Certificate of completion</p>
+                        <p>✗ 1-on-1 mentoring</p>
+                    </div>
+
+                    <div class="but"><button type="button" data-auth="signup" data-plan="Pro">Get Started</button></div>
+
+                </div>
+                <div class="plane3 plane">
+
+                    <div class="logo-plane">
+                        <h3>Premium</h3>
+                        <h2><span>$79</span>/month</h2>
+                    </div>
+
+                    <div class="texts">
+                        <p>✓ Everything in Pro</p>
+                        <p>✓ 1-on-1 mentoring</p>
+                        <p>✓ Career coaching</p>
+                        <p>✓ Resume review</p>
+                        <p>✓ Job placement assistance</p>
+                    </div>
+
+                    <div class="but"><button type="button" data-auth="signup" data-plan="Premium">Get Started</button></div>
+
+                </div>
+                </div>
+            </section>
+
+            <!-- ============================ CTA ============================ -->
+            <div class="cta-section">
+                <h2 class="cta-title">Ready to Start Your Learning Journey?</h2>
+                <p class="cta-text">Join over 50,000 students already learning on Skillify</p>
+                <button type="button" class="cta-btn" data-auth="signup">Get Started for Free</button>
+            </div>
+
+        </main>
+
+        <!-- ============================ الفوتر ============================ -->
+        <footer class="footer">
+            <div class="contaner">
+
+                <div class="footer-icon items">
+
+                    <div class="logo"><h2>🎓 Skillify Academy</h2></div>
+
+                    <div class="social-icons">
+                        <a class="facebook" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"/></svg></a>
+                        <a class="twitter" href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm297.1 84l-103.8 118.6 122.1 161.4-95.6 0-74.8-97.9-85.7 97.9-47.5 0 111-126.9-117.1-153.1 98 0 67.7 89.5 78.2-89.5 47.5 0zM323.3 367.6l-169.9-224.7-28.3 0 171.8 224.7 26.4 0z"/></svg></a>
+                        <a class="instagram" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.2 88.6 53.3 53.3 0 1 0 -59.2-88.6zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12-18.1-7.1-57.6-6.8-83.1-6.5-4.1 0-7.9 .1-11.2 .1s-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2 0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2 2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5 4.1 0 7.9-.1 11.2-.1s7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5 6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83 0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83-2.7-6.9-6.8-13.1-12-18.4l0 .2zm-67.1 44.5c18.1 12.1 30.6 30.9 34.9 52.2s-.2 43.5-12.3 61.6c-6 9-13.7 16.6-22.6 22.6s-19 10.1-29.6 12.2c-21.3 4.2-43.5-.2-61.6-12.3s-30.6-30.9-34.9-52.2 .2-43.5 12.2-61.6 30.9-30.6 52.2-34.9 43.5 .2 61.6 12.2l.1 0zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1 2.6-7.1 5.2-9.8 6.1-4.5 9.8-5.2 7.6-.4 11.1 1.1 6.5 3.9 8.6 7 3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2-3.9 3.2-6.2 4.2-4.8 1.5-7.3 1.5c-3.8 0-7.5-1.1-10.6-3.2l-.1 0zM448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM357 389c-18.7 18.7-41.4 24.6-67 25.9-26.4 1.5-105.6 1.5-132 0-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132 1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0 25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9-1.3 25.6-7.1 48.3-25.8 67l0 .1z"/></svg></a>
+                        <a class="linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"/></svg></a>
+                    </div>
+                    <p>Hand-picked courses and learning paths to help you start and grow a career in tech.</p>
+                </div>
+
+                <nav class="company items" aria-label="Explore">
+                    <div class="title"><h2>Explore</h2></div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="#top">Home</a></li>
+                            <li><a href="#courses" data-filter="All">Courses</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <nav class="courses items" aria-label="Course categories">
+                    <div class="title"><h2>Categories</h2></div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="#courses" data-filter="Web Development">Web Development</a></li>
+                            <li><a href="#courses" data-filter="Design">Design</a></li>
+                            <li><a href="#courses" data-filter="Data Science">Data Science</a></li>
+                            <li><a href="#courses" data-filter="Marketing">Marketing</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <nav class="support items" aria-label="Free resources">
+                    <div class="title"><h2>Free resources</h2></div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="https://roadmap.sh/" target="_blank" rel="noopener noreferrer">roadmap.sh</a></li>
+                            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+                            <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a></li>
+                            <li><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer">Kaggle Learn</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Skillify Academy. Demo project: course links go to the original providers; stats, reviews and plans are sample content.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ============================ نافذة Login / Sign up (تجريبية) ============================ -->
+    <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-title">
+        <div class="auth-inner">
+            <div class="auth-head">
+                <h2 id="auth-title">Log in</h2>
+                <button class="auth-close" type="button" aria-label="Close">&times;</button>
+            </div>
+
+            <form id="auth-form">
+                <div class="field" id="auth-name-field" hidden>
+                    <label for="auth-name">Full name</label>
+                    <input id="auth-name" type="text" autocomplete="name" required minlength="2" disabled>
+                </div>
+                <div class="field">
+                    <label for="auth-email">Email</label>
+                    <input id="auth-email" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="auth-password">Password</label>
+                    <input id="auth-password" type="password" autocomplete="current-password" required minlength="8">
+                </div>
+                <button class="auth-submit" id="auth-submit" type="submit">Log in</button>
+                <button class="auth-switch" id="auth-switch" type="button">New here? Create an account</button>
+            </form>
+
+            <p class="auth-message" id="auth-message" role="status" hidden></p>
+            <p class="auth-note">Demo only: nothing is sent or stored.</p>
+        </div>
+    </dialog>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

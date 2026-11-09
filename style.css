@@ -1,0 +1,1243 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary:    #4338ca;   /* بنفسجي/أزرق غامق */
+    --secondary:  #fbbf24;   /* أصفر ذهبي */
+    --success:    #10b981;   /* أخضر */
+    --bg:         #f8fafc;   /* أبيض مزرق */
+    --dark:       #0f172a;   /* أسود مزرق */
+    --text:       #475569;   /* رمادي */
+    --card-bg:    #ffffff;
+    --border:     #e2e8f0;
+    --font-family-large: Poppins;   /*للعناوين*/
+    --font-family-small: Inter;    /*للنصوص*/
+}
+.page{
+    width: 100%;
+}
+.page .header{
+    width: 100%;
+    background-color: rgb(37, 37, 134);
+}
+.page .header .navbar{
+    max-width: 1280px;
+    margin: auto;
+    background-color: rgb(37, 37, 134);
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+}
+
+/* ======================================================== */
+/* تنسيقات اللينكات والـ Dropdown الجديدة التي تم إضافتها   */
+/* ======================================================== */
+
+/* تنسيق القائمة الرئيسية للينكات */
+.nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 15px; /* مسافة بين اللينكات الأساسية */
+}
+
+/* تنسيق اللينكات الأساسية */
+.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: var(--font-family-small);
+    font-weight: 500;
+    padding: 10px 16px;
+    display: block;
+    border-radius: 6px;
+    background-color: #4338ca;
+    transition-duration: 0.3s;
+}
+.nav > li > a:hover {
+    transform: scale(1.06);
+}
+
+/* جعل الـ li الخاص بـ Courses نقطة ارتكاز (Relative) للقائمة المنسدلة */
+.dropdown {
+    position: relative;
+}
+
+/* تنسيق القائمة المنسدلة (مخفية افتراضياً) */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* تظهر مباشرة تحت كلمة Courses */
+    left: -60px;
+    background-color: rgb(28, 28, 105); /* درجة أغمق قليلاً من لون الهيدر لتبدو متناسقة */
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 8px 0;
+    margin-top: 0;
+    display: none; /*إخفاء*/
+    z-index: 100;
+}
+
+/* تنسيق العناصر داخل القائمة المنسدلة */
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family-small);
+    padding: 10px 20px;
+    display: block;
+}
+
+/* تأثير الـ Hover على عناصر القائمة المنسدلة */
+.dropdown-menu li a:hover {
+    background-color: var(--primary); /* استخدام اللون البنفسجي من المتغيرات */
+}
+
+/* تأثير الـ Hover على القائمة بأكملها عند الوقوف على زر Courses */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: block; /* إظهار القائمة */
+}
+.header .navbar .button{
+    display: flex;
+    gap: 30px;
+    margin: 20px;
+}
+
+.header .navbar .button .outline{
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 8px 20px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: var(--font-family-small);
+    font-weight: 500;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.header .navbar .button .outline:hover{
+    background-color: white;
+    color: var(--primary);
+}
+.header .navbar .button .tow-button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 18px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 17px;
+    font-family: var(--font-family-small);
+    transition-duration: 0.3s;
+}
+.header .navbar .button .tow-button:hover{
+    transform: scale(1.1);
+}
+.section{
+    width: 100%;
+    background-color: white;
+}
+.section .hero-section{
+    max-width: 1280px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+.section .hero-section .left-section{
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.section .hero-section .left-section .badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-family: var(--font-family-small);
+    font-weight: 600;
+    color: var(--primary);
+    background-color: #e0e7ff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.section .hero-section .left-section .text{
+    color: var(--dark);
+}
+.section .hero-section .left-section .text h1{
+    font-family: var(--font-family-large);
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.section .hero-section .left-section .text p{
+    font-family: var(--font-family-small);
+    color: var(--text);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.section .hero-section .left-section .button .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 28px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    font-family: var(--font-family-small);
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    color: var(--dark);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.section .hero-section .left-section .button .hero-btn:hover{
+    transform: translateY(-3px);
+}
+.section .hero-section .left-section .row-retings h3{
+    font-family: var(--font-family-small);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+}
+.section .hero-section .right-section{
+    flex: 1;
+    max-width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trusted-by {
+    max-width: 1280px;
+    margin: 40px auto;
+    text-align: center;
+}
+.trusted-by p {
+    font-family: var(--font-family-small);
+    color: var(--text);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.trusted-by .logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 18px;
+    font-family: var(--font-family-large);
+    color: var(--text);
+    opacity: 0.6;
+}
+.section .cards{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.section .cards .card1{ background-color: #e0e7ff; }
+.section .cards .card2{ background-color: #fef3c7; }
+.section .cards .card3{ background-color: #d1fae5; }
+.section .cards .card4{ background-color: #fee2e2; }
+
+.section .cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease;
+}
+.section .cards .card:hover{
+    transform: translateY(-5px);
+}
+.section .cards .card .icon{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.section .cards .card .texts h2{
+    font-family: var(--font-family-large);
+    font-size: 20px;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+.section .cards .card .texts p{
+    font-family: var(--font-family-small);
+    font-size: 16px;
+    color: var(--text);
+}
+.section .popular-courses{
+    max-width: 1280px;
+    margin: 0 auto 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+.section .popular-courses .cours{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: var(--dark);
+    background-color:var(--card-bg);
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border: 1px solid var(--border);
+}
+.section .popular-courses .cours:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgb(0, 0, 0, 0.1);
+}
+.section .popular-courses .cours .icon{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e7ff;
+    font-size: 50px;
+}
+.section .popular-courses .cours .icon{
+    position: relative;
+    overflow: hidden;
+}
+.section .popular-courses .cours .icon span{
+    transition: transform 0.6s ease;
+    position: relative;
+    z-index: 2;
+}
+.section .popular-courses .cours .icon p{
+    position: absolute;
+    font-family: var(--font-family-small);
+    font-size: 20px;
+    font-weight: bold;
+    left: 52%;
+    transform: translateX(-50%);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.section .popular-courses .cours .icon:hover span{
+    transform: translateX(-40px);
+}
+.section .popular-courses .cours .icon:hover p{
+    transform: translateX(5px);
+    opacity: 1;
+    visibility: visible;
+}
+.section .popular-courses .cours .content-cours{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 12px;
+}
+.section .popular-courses .cours .content-cours .category-tag {
+    font-family: var(--font-family-small);
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+.section .popular-courses .cours .content-cours .course-title {
+    font-family: var(--font-family-large);
+    font-size: 18px;
+    color: var(--dark);
+    line-height: 1.4;
+}
+.section .popular-courses .cours .content-cours .instructor {
+    font-family: var(--font-family-small);
+    color: var(--text);
+    font-size: 14px;
+}
+.section .popular-courses .cours .content-cours .rating {
+    font-family: var(--font-family-small);
+    font-size: 14px;
+    color: #f59e0b;
+}
+.section .popular-courses .cours .content-cours .price{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark);
+    margin-top: 5px;
+}
+.section .popular-courses .cours .content-cours .price del {
+    color: var(--text);
+    font-weight: normal;
+    font-size: 15px;
+}
+.section .work-steps{
+    max-width: 1280px;
+    margin: 0 auto 120px auto;
+}
+.section .work-steps .address{
+    font-size: 32px;
+    color: var(--dark);
+    font-family: var(--font-family-large);
+    margin-bottom: 80px;
+    text-align: center;
+}
+.section .work-steps .steps{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+}
+.section .work-steps .steps .step{
+    background-color: var(--card-bg);
+    color: var(--dark);
+    border: 1px solid var(--border);
+    padding: 40px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    position: relative;
+}
+.section .work-steps .steps .step1::before{ content: "1"; left: 50%; transform: translateX(-50%); }
+.section .work-steps .steps .step2::before{ content: "2"; left: 50%; transform: translateX(-50%); }
+.section .work-steps .steps .step3::before{ content: "3"; left: 50%; transform: translateX(-50%); }
+
+.section .work-steps .steps .step1::before,
+.section .work-steps .steps .step2::before,
+.section .work-steps .steps .step3::before{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    text-align: center;
+    line-height: 35px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    top: -56px;
+    z-index: 2;
+}
+.section .work-steps .steps::after{
+    content: "";
+    position: absolute;
+    width: 66.66%;
+    top: -38px;
+    left: 16.67%;
+    height: 2px;
+    background-color: var(--border);
+}
+.section .work-steps .steps .step h3{
+    font-family: var(--font-family-large);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.section .work-steps .steps .step p{
+    font-family: var(--font-family-small);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+}
+.section .stats-banner{
+    max-width: 1280px;
+    margin: 0 auto 100px auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    background-color: var(--dark);
+    border-radius: 16px;
+}
+.section .stats-banner .banner{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.section .stats-banner .banner1{ background-color: rgba(251, 191, 36, 0.15); color: var(--secondary); }
+.section .stats-banner .banner2{ background-color: rgba(16, 185, 129, 0.15); color: var(--success); }
+.section .stats-banner .banner3{ background-color: rgba(239, 68, 68, 0.15); color: #f87171; }
+.section .stats-banner .banner4{ background-color: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+
+.section .stats-banner .banner p{
+    font-family: var(--font-family-small);
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.section .stats-banner .banner h3{
+    font-family: var(--font-family-large);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.section .testimonials{
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.section .testimonials .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+}
+.section .testimonials .card h3{
+    font-family: var(--font-family-small);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.section .testimonials .card span{
+    font-size: 13px;
+    opacity: 0.7;
+    display: block;
+}
+.section .testimonials .testimonials1 p,
+.section .testimonials .testimonials3 p{
+    font-family: var(--font-family-small);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+.section .testimonials .testimonials2 p,
+.section .testimonials .testimonials4 p{
+    font-family: var(--font-family-large);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 16px;
+}
+.section .testimonials .testimonials1{
+    background-color: #6c5ce7;
+    color: #ffffff;
+}
+.section .testimonials .testimonials2{
+    background-color: #ffffff;
+    color: #2d3436;
+}
+.section .testimonials .testimonials3{
+    background-color: white;
+}
+.section .testimonials .testimonials4{
+    background-color: #1e272e;
+    color: #ffffff;
+}
+.section .pricing-plane{
+    max-width: 1280px;
+    margin: 70px auto 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 45px;
+}
+.section .pricing-plane .plane{
+    flex: 1 1 290px;
+    max-width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 6px 5px rgba(0, 0, 0, 0.05), 0 2px 4px 5px rgb(0, 0, 0,0.03);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.5s;
+}
+.section .pricing-plane .plane2{
+    max-width: 360px;
+    border: 2px solid #1500ff;
+    position: relative;
+}
+.section .pricing-plane .plane2::before {
+    content: "Most Popular";
+    position: absolute;
+    left: 50%;
+    top: 0; /* جرب تخليها 0 أو قيمة مناسبة */
+    transform: translate(-50%, -50%);
+    z-index: 10; /* رفعنا الـ z-index عشان نضمن إنه فوق الكارت */
+    
+    /* الخواص الجديدة اللي هتعمل شكل الـ Badge */
+    background-color: #1500ff; /* نفس لون الـ border الأزرق بتاعك */
+    color: #fff; /* لون الخط أبيض عشان يبان */
+    padding: 4px 12px; /* مساحة داخلية عشان تديه شكل المستطيل */
+    font-family: var(--font-family-small);
+    font-size: 12px; /* حجم خط صغير ومناسب للـ badges */
+    font-weight: bold;
+    border-radius: 50px; /* حواف دائرية بالكامل */
+    white-space: nowrap; /* تمنع الكلمتين إنهم ينزلوا تحت بعض */
+}
+.section .pricing-plane .plane1:hover,
+.section .pricing-plane .plane3:hover{
+    transform: translateY(10px);
+}
+.section .pricing-plane .plane2:hover{
+    transform: scale(1.1);
+}
+.section .pricing-plane .plane .logo-plane{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.section .pricing-plane .plane .logo-plane h3{
+    margin-top: 20px;
+    font-family: var(--font-family-small);
+    font-size: 24px;
+}
+.section .pricing-plane .plane .logo-plane h2{
+    color: var(--text);
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    font-family: var(--font-family-large);
+    font-size: 18px;
+}
+.section .pricing-plane .plane .logo-plane h2 span{
+    color: #094a8b;
+    font-size: 36px;
+}
+.section .pricing-plane .plane .texts{
+    line-height: 40px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    font-family: var(--font-family-small);
+}
+.section .pricing-plane .plane .but{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.section .pricing-plane .plane .but button{
+    padding: 15px 70px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--secondary);
+    margin-bottom: 15px;
+    font-family: var(--font-family-small);
+    font-size: 16px;
+    transition-duration: 0.3s;
+}
+.section .pricing-plane .plane .but button:hover{
+    transform: scale(1.1);
+}
+.section .pricing-plane .plane2 .but button{
+    background-color: var(--primary);
+    color: white;
+}
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), #6366f1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center;   
+    text-align: center;
+    padding: 80px 20px; 
+    gap: 20px; 
+    border-radius: 16px;
+    max-width: 1280px;
+    margin: 0 auto 60px auto;
+}
+.cta-title{
+    color: #ffffff;
+    font-family: var(--font-family-large);
+    font-size: 36px;
+}
+.cta-text {
+    color: rgba(255,255,255,0.9);
+    font-family: var(--font-family-small);
+    font-size: 18px;
+}
+.cta-btn {
+    background-color: white;
+    color: var(--primary);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.cta-btn:hover{
+    transform: translateY(-3px);
+}
+
+.footer .contaner{
+    width: 100%;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 40px;
+    background-color: var(--dark);
+    color: white;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.items h2{
+    font-family: var(--font-family-large);
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+.items .links ul {
+    list-style: none;
+}
+.items ul li{
+    font-family: var(--font-family-small);
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.items ul li:hover{
+    color: var(--secondary);
+}
+.footer-icon{
+    text-align: center;
+}
+.footer-icon p {
+    font-family: var(--font-family-small);
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    font-size: 14px;
+}
+.footer-icon .social-icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer-icon .social-icons a svg{
+    width: 24px;
+    height: 24px;
+    fill: rgba(255,255,255,0.6);
+    transition: fill 0.3s ease;
+}
+.footer-icon .social-icons a:hover svg {
+    fill: var(--secondary);
+}
+
+/* ============================================================ */
+/* إضافات: أساسيات + وصولية (Accessibility)                      */
+/* ============================================================ */
+html{ scroll-behavior: smooth; }
+section[id], main[id]{ scroll-margin-top: 90px; }
+body{
+    font-family: var(--font-family-small), system-ui, sans-serif;
+    color: var(--dark);
+    background: #fff;
+}
+button{ font-family: inherit; }
+img, svg{ max-width: 100%; }
+[hidden]{ display: none !important; }
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.skip-link{
+    position: absolute;
+    left: 12px;
+    top: -64px;
+    z-index: 300;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--secondary);
+    color: var(--dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+.skip-link:focus{ top: 12px; }
+
+:focus-visible{ outline: 3px solid var(--primary); outline-offset: 3px; }
+.header :focus-visible,
+.footer :focus-visible,
+.cta-section :focus-visible{ outline-color: var(--secondary); }
+
+/* ============================================================ */
+/* الهيدر: ثابت فوق + لوجو + قايمة الموبايل                       */
+/* ============================================================ */
+.page .header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo{
+    color: #fff;
+    font-family: var(--font-family-large), sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.nav-panel{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 32px;
+}
+.menu-toggle{
+    display: none;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+.dropdown-menu::before{      /* جسر غير مرئي عشان القايمة ما تقفلش وإنت نازل بالماوس */
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+}
+.header .navbar .button button{ cursor: pointer; }
+
+/* ============================================================ */
+/* Hero: بدل الدواير الملونة، كارت "كمّل تعلمك" بيوري المنتج     */
+/* ============================================================ */
+.hero-visual{
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 0;
+}
+.learn-card{
+    text-align: left;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: 0 20px 50px rgba(67, 56, 202, 0.15);
+}
+.learn-card__top{ display: flex; align-items: center; gap: 14px; }
+.learn-card__icon{
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    flex: none;
+    border-radius: 14px;
+    background: #e0e7ff;
+    font-size: 26px;
+}
+.learn-card__label{ font-size: 13px; color: var(--text); }
+.learn-card__title{
+    font-family: var(--font-family-large), sans-serif;
+    font-size: 18px;
+    color: var(--dark);
+}
+.progress{
+    height: 10px;
+    margin: 22px 0 10px;
+    border-radius: 99px;
+    background: #e0e7ff;
+    overflow: hidden;
+}
+.progress__bar{
+    display: block;
+    width: 67%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--primary), #6366f1);
+    animation: fill-bar 1.2s ease-out both;
+}
+.learn-card__meta{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text);
+}
+.learn-card__meta strong{ color: var(--primary); }
+.learn-card__list{ list-style: none; margin-top: 18px; display: grid; gap: 10px; }
+.learn-card__list li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--dark);
+}
+.learn-card__list .todo{
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+}
+.float-chip{
+    position: absolute;
+    padding: 9px 15px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    white-space: nowrap;
+    animation: float-chip 4.5s ease-in-out infinite;
+}
+.float-chip--cert{ top: 0; right: -14px; }
+.float-chip--streak{ bottom: 4px; left: -14px; animation-delay: -2s; }
+@keyframes fill-bar{ from{ width: 0; } }
+@keyframes float-chip{ 50%{ transform: translateY(-8px); } }
+
+/* ============================================================ */
+/* المنصات اللي الكورسات جاية منها (لينكات حقيقية)               */
+/* ============================================================ */
+.trusted-by{ padding-inline: 20px; }
+.trusted-by .logos{ flex-wrap: wrap; gap: 12px; opacity: 1; }
+.trusted-by .logos a{
+    padding: 9px 20px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.trusted-by .logos a:hover{
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* كروت التصنيفات بقت أزرار بتفلتر الكورسات */
+.section .cards{ padding-inline: 20px; }
+.section .cards button.card{
+    width: 100%;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+.section .cards .card.is-active{ outline: 3px solid var(--primary); outline-offset: 2px; }
+
+/* ============================================================ */
+/* قسم الكورسات: عنوان + فلتر + كروت لينكاتها حقيقية              */
+/* ============================================================ */
+.courses-section{
+    max-width: 1280px;
+    margin: 90px auto 0;
+    padding-inline: 20px;
+}
+.section-title{
+    font-family: var(--font-family-large), sans-serif;
+    font-size: 32px;
+    color: var(--dark);
+    text-align: center;
+}
+.section-sub{
+    max-width: 640px;
+    margin: 10px auto 0;
+    color: var(--text);
+    line-height: 1.6;
+    text-align: center;
+}
+.filter-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 28px 0 12px;
+}
+.chip{
+    padding: 9px 18px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.chip:hover{ border-color: var(--primary); color: var(--primary); }
+.chip[aria-pressed="true"]{ background: var(--primary); border-color: var(--primary); color: #fff; }
+.filter-status{
+    margin-bottom: 32px;
+    color: var(--text);
+    font-size: 14px;
+    text-align: center;
+}
+
+.section .popular-courses .cours{ position: relative; }
+.section .popular-courses .cours .content-cours{ flex: 1; }
+.course-link{ color: inherit; text-decoration: none; }
+.course-link::after{            /* الكارت كله بقى لينك واحد */
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+.course-link:focus-visible{ outline: none; }
+.cours:focus-within{ outline: 3px solid var(--primary); outline-offset: 3px; }
+.course-desc{ font-size: 14px; line-height: 1.6; color: var(--text); }
+.course-meta{ list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.course-meta li{
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+.course-meta .tag--free{ background: #d1fae5; color: #047857; }
+.course-meta .tag--paid{ background: #fef3c7; color: #92400e; }
+.course-cta{
+    margin-top: auto;
+    padding-top: 6px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* آراء الطلاب: ترتيب Bento كامل من غير خانات فاضية */
+.section .testimonials .testimonials1{ grid-column: 1 / span 2; grid-row: 1; }
+.section .testimonials .testimonials3{ grid-column: 3; grid-row: 1 / span 2; }
+.section .testimonials .testimonials2{ grid-column: 1; grid-row: 2; }
+.section .testimonials .testimonials4{ grid-column: 2; grid-row: 2; }
+
+/* عناوين الأقسام الجديدة */
+.reviews-section .section-title,
+.pricing-section .section-title{ margin-bottom: 10px; }
+.reviews-section .section-title{ margin-bottom: 48px; }
+.reviews-section, .pricing-section{ padding-inline: 20px; }
+.section .testimonials, .section .pricing-plane, .section .work-steps{ padding-inline: 0; }
+.section .work-steps{ padding-inline: 20px; }
+.section .stats-banner, .cta-section{ width: calc(100% - 40px); }
+.pricing-plane .plane .but a, .pricing-plane .plane .but button{ cursor: pointer; }
+
+/* ============================================================ */
+/* الفوتر                                                        */
+/* ============================================================ */
+.items ul li a{ color: inherit; text-decoration: none; }
+.footer-bottom{
+    padding: 20px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--dark);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+.footer-icon .social-icons a{ display: inline-flex; }
+
+/* ============================================================ */
+/* نافذة Login / Sign up (تجريبية)                               */
+/* ============================================================ */
+.auth-dialog{
+    width: min(420px, calc(100% - 32px));
+    margin: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 16px;
+    background: #fff;
+    color: var(--dark);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+}
+.auth-dialog::backdrop{ background: rgba(15, 23, 42, 0.6); }
+.auth-inner{ display: grid; gap: 16px; padding: 24px; }
+.auth-head{ display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.auth-head h2{ font-family: var(--font-family-large), sans-serif; font-size: 22px; }
+.auth-close{
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: var(--primary);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+#auth-form{ display: grid; gap: 14px; }
+.field{ display: grid; gap: 6px; }
+.field label{ font-size: 14px; font-weight: 600; }
+.field input{
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font: inherit;
+    color: var(--dark);
+}
+.field input:focus{ outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15); }
+.auth-submit{
+    padding: 13px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.auth-switch{
+    border: 0;
+    background: none;
+    color: var(--primary);
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.auth-message{ padding: 14px; border-radius: 10px; background: #d1fae5; color: #065f46; line-height: 1.5; }
+.auth-note{ color: var(--text); font-size: 12px; text-align: center; }
+
+/* ============================================================ */
+/* Media Queries (الريسبونسيف)                                   */
+/* ============================================================ */
+
+/* لاب توب صغير / تابلت عريض */
+@media (max-width: 1100px){
+    .section .hero-section{ gap: 32px; padding: 40px 24px; }
+    .section .hero-section .left-section .text h1{ font-size: 40px; }
+    .section .popular-courses{ grid-template-columns: repeat(2, 1fr); }
+    .footer .contaner{ padding: 50px 28px; gap: 28px; }
+    .nav-panel{ margin-left: 16px; }
+    .nav{ gap: 8px; }
+    .nav > li > a{ padding: 9px 12px; font-size: 16px; }
+}
+
+/* تابلت: القايمة تتحول لزرار هامبرجر + كل حاجة تترص تحت بعض */
+@media (max-width: 900px){
+    .menu-toggle{ display: inline-flex; }
+    .page .header .navbar{ position: relative; }
+    .nav-panel{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 16px 20px 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        background: rgb(28, 28, 105);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+    }
+    .nav-panel.is-open{ display: flex; }
+    .nav{ flex-direction: column; align-items: stretch; gap: 8px; }
+    .nav > li > a{ text-align: center; }
+    .nav > li > a:hover{ transform: none; }
+    .dropdown-menu{
+        position: static;
+        display: block;
+        min-width: 0;
+        margin: 6px 0 0;
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: none;
+    }
+    .dropdown-menu::before{ display: none; }
+    .dropdown-menu li a{ text-align: center; }
+    .header .navbar .button{ margin: 0; justify-content: center; }
+
+    .section .hero-section{
+        flex-direction: column;
+        margin-top: 16px;
+        padding: 32px 20px 24px;
+        text-align: center;
+    }
+    .section .hero-section .left-section{ max-width: 640px; align-items: center; text-align: center; }
+    .section .hero-section .right-section{ width: 100%; }
+    .section .cards{ grid-template-columns: repeat(2, 1fr); margin-top: 56px; }
+    .section .work-steps .steps{ grid-template-columns: 1fr; gap: 64px; }
+    .section .work-steps .steps::after{ display: none; }
+    .section .work-steps .address{ margin-bottom: 72px; }
+    .section .stats-banner{ grid-template-columns: repeat(2, 1fr); }
+    .section .testimonials{ grid-template-columns: 1fr; }
+    .section .testimonials .testimonials1,
+    .section .testimonials .testimonials2,
+    .section .testimonials .testimonials3,
+    .section .testimonials .testimonials4{ grid-column: auto; grid-row: auto; }
+    .section .pricing-plane .plane1:hover,
+    .section .pricing-plane .plane3:hover,
+    .section .pricing-plane .plane2:hover{ transform: none; }
+    .footer .contaner{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* موبايل */
+@media (max-width: 600px){
+    .page .header .navbar{ padding: 0 16px; }
+    .logo{ font-size: 19px; }
+    .section .hero-section .left-section .text h1{ font-size: 32px; }
+    .section .hero-section .left-section .text p{ font-size: 16px; }
+    .section-title,
+    .section .work-steps .address{ font-size: 26px; }
+    .float-chip--cert{ right: 0; }
+    .float-chip--streak{ left: 0; }
+    .learn-card{ padding: 20px; }
+    .section .cards{ gap: 14px; }
+    .section .cards .card .texts h2{ font-size: 17px; }
+    .courses-section{ margin-top: 64px; }
+    .section .popular-courses{ grid-template-columns: 1fr; gap: 24px; margin-bottom: 72px; }
+    .section .stats-banner{ padding: 16px; gap: 12px; margin-bottom: 72px; }
+    .section .stats-banner .banner{ padding: 14px 8px; }
+    .section .stats-banner .banner p{ font-size: 26px; }
+    .section .work-steps{ margin-bottom: 80px; }
+    .section .testimonials{ margin-bottom: 72px; }
+    .section .pricing-plane{ gap: 36px; margin-bottom: 72px; }
+    .section .pricing-plane .plane{ max-width: 100%; }
+    .cta-section{ padding: 56px 20px; }
+    .cta-title{ font-size: 26px; }
+    .cta-text{ font-size: 16px; }
+    .footer .contaner{ grid-template-columns: 1fr; padding: 44px 20px; }
+    .footer-bottom{ padding: 18px 20px; }
+}
+
+/* موبايلات صغيرة جدًا */
+@media (max-width: 380px){
+    .section .hero-section .left-section .text h1{ font-size: 28px; }
+    .section .cards{ grid-template-columns: 1fr; }
+    .filter-bar{ gap: 8px; }
+    .chip{ padding: 8px 14px; font-size: 14px; }
+}
+
+/* لو المستخدم مفعّل "تقليل الحركة" نلغي الأنيميشن */
+@media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *, *::before, *::after{
+        animation: none !important;
+        transition: none !important;
+    }
+}
